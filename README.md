@@ -1,72 +1,84 @@
-```markdown
+Got it! Let's break it down without a big markdown block at the beginning.
+
+---
+
 # Student Performance Prediction
 
 This project aims to predict the final grades of students based on various factors such as demographics, study habits, and past performance. The dataset used is `student-por.csv`, which contains information on Portuguese students.
 
 ## Table of Contents
-- [Overview](#overview)
-- [Dataset](#dataset)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Visualizations](#visualizations)
-- [Model](#model)
-- [Results](#results)
-- [Contributing](#contributing)
-- [License](#license)
+- Overview
+- Dataset
+- Installation
+- Usage
+- Visualizations
+- Model
+- Results
+- Contributing
+- License
 
 ## Overview
 The goal of this project is to predict the final grade (`G3`) of students using a Linear Regression model. The model takes various features such as `age`, `studytime`, `absences`, and past grades (`G1`, `G2`) to make the prediction.
 
 ## Dataset
 The dataset `student-por.csv` includes the following columns:
-
-- `school`, `sex`, `age`, `address`, `famsize`, `Pstatus`, `Medu`, `Fedu`, `Mjob`, `Fjob`, `reason`, `guardian`, `traveltime`, `studytime`, `failures`, `schoolsup`, `famsup`, `paid`, `activities`, `nursery`, `higher`, `internet`, `romantic`, `famrel`, `freetime`, `goout`, `Dalc`, `Walc`, `health`, `absences`, `G1`, `G2`, `G3`
+- `school`: The school the student attends
+- `sex`: The gender of the student
+- `age`: The age of the student
+- `address`, `famsize`, `Pstatus`, `Medu`, `Fedu`, `Mjob`, `Fjob`, `reason`, `guardian`
+- `traveltime`: The travel time to school
+- `studytime`: The amount of study time per week
+- `failures`: The number of past class failures
+- `schoolsup`, `famsup`, `paid`, `activities`, `nursery`
+- `higher`: Whether the student plans to take higher education
+- `internet`: Whether the student has internet access at home
+- `romantic`: Romantic relationship status
+- `famrel`, `freetime`, `goout`, `Dalc`, `Walc`, `health`
+- `absences`: The number of school absences
+- `G1`: The first period grade
+- `G2`: The second period grade
+- `G3`: The final grade
 
 ## Installation
 1. Clone the repository:
-   ```bash
+   ```
    git clone https://github.com/yourusername/student-performance-prediction.git
    cd student-performance-prediction
    ```
 
 2. Create a virtual environment and activate it:
-   ```bash
+   ```
    python -m venv env
    source env/bin/activate   # On Windows use `env\Scripts\activate`
    ```
 
 3. Install the required packages:
-   ```bash
+   ```
    pip install -r requirements.txt
    ```
 
-4. Ensure you have the dataset `student-por.csv` in the project directory.
+4. Ensure you have the dataset:
+   Make sure `student-por.csv` is in the project directory.
 
 ## Usage
-1. **Training the Model**:
-   If you need to train the model, you can use the provided script (if not already trained):
-   ```bash
-   python train_model.py
+1. **Open the Jupyter Notebook**:
+   Start Jupyter Notebook by running:
    ```
-
-2. **Making Predictions**:
-   Run the prediction script to input new student data and get a grade prediction:
-   ```bash
-   python predict.py
+   jupyter notebook
    ```
+   Open the notebook file (e.g., `student_performance_prediction.ipynb`).
 
-   The script will prompt you for various inputs and provide a predicted final grade (`G3`).
+2. **Run the Notebook**:
+   Follow the instructions within the notebook to:
+   - Load and clean the dataset
+   - Train the model (if not already trained)
+   - Make predictions based on new inputs
+   - Visualize the data
 
 ## Visualizations
 The project includes visualizations to explore the relationship between absences and final grades:
-
-- **Scatter Plot**: Shows individual data points for absences vs. final grades.
-- **Box Plot**: Displays the distribution of final grades for different ranges of absences.
-
-To generate these visualizations, run:
-```bash
-python visualize.py
-```
+- Scatter Plot: Shows individual data points for absences vs. final grades.
+- Box Plot: Displays the distribution of final grades for different ranges of absences.
 
 ## Model
 The model used in this project is a Linear Regression model. It was trained using the following features:
@@ -83,5 +95,3 @@ Contributions are welcome! Please fork the repository and create a pull request 
 ## License
 This project is licensed under the MIT License.
 ```
-
-This README file provides a comprehensive overview of your project, including instructions for setting up the environment, running the model, and visualizing the data. Adjust the details as necessary to fit your specific project and repository.
