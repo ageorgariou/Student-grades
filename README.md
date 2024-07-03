@@ -1,5 +1,3 @@
-Got it! Let's break it down without a big markdown block at the beginning.
-
 ---
 
 # Student Performance Prediction
